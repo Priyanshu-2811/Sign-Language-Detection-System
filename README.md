@@ -108,16 +108,37 @@ python data_collection.py
 
 ## 🧠 Model Training
 
-The project uses a pre-trained TensorFlow model. To train your own model:
+### 🎯 Training Options
 
-1. **Collect Data**: Use `data_collection.py` to gather training images
-2. **Train Model**: Upload images to [Teachable Machine](https://teachablemachine.withgoogle.com/)
-   - Choose "Image Project"
-   - Create classes for YES and NO
-   - Upload your collected images
-   - Train the model
-3. **Download Model**: Export as TensorFlow and download `keras_model.h5` and `labels.txt`
-4. **Replace Files**: Put the new files in the `Model/` folder
+**Method 1: Teachable Machine (Recommended)**
+1. **Upload Data**: Visit [Teachable Machine](https://teachablemachine.withgoogle.com/)
+   - Choose "Image Project" → "Standard Image Model"
+   - Create classes for your gestures (YES, NO, 0-9, etc.)
+   - Upload collected images for each class
+2. **Train Model**: Click "Train Model" and wait for completion
+3. **Export Model**: Choose TensorFlow → Keras format
+4. **Download Files**: Get `keras_model.h5` and `labels.txt`
+5. **Deploy**: Replace files in the `Model/` folder
+
+**Method 2: Custom TensorFlow Training**
+1. **Prepare Dataset**: Organize images in class folders
+2. **Design Architecture**: Create CNN model with appropriate layers
+3. **Configure Training**: Set epochs, batch size, and learning rate
+4. **Train & Validate**: Monitor accuracy and loss metrics
+5. **Export Model**: Save trained model in Keras format
+
+### 🎨 Training Best Practices
+- **Balanced Dataset**: Equal images per class (50-100 recommended)
+- **Data Variety**: Different backgrounds, lighting, and hand angles
+- **Quality Control**: Remove blurry or incorrect gesture images
+- **Validation Split**: Use 20% of data for testing
+- **Data Augmentation**: Apply rotation, zoom, and brightness variations
+
+### 📈 Model Performance
+- **Target Accuracy**: 90%+ for reliable detection
+- **Confidence Threshold**: 0.7 for stable predictions
+- **Real-time Performance**: Optimized for live camera feed
+- **Model Size**: Lightweight for fast inference
 
 ## 📁 Project Structure
 
