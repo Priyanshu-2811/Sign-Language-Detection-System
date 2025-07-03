@@ -29,7 +29,7 @@ A real-time hand gesture recognition system that detects and classifies hand ges
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Priyanshu-2811/Sign-Language-Detection-System.git
 cd "HS Detection"
 ```
 
