@@ -1,0 +1,31 @@
+# Python Cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtual Environment
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Training Data (PRIVATE)
+Data/
+
+# OS Generated
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# Image files (keep training data private)
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Keep Model Files (COMMIT THESE)
+!Model/
